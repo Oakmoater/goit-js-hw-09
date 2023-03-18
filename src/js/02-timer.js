@@ -1,5 +1,6 @@
 import flatpickr from "flatpickr";
 import "flatpickr/dist/flatpickr.min.css";
+import Notiflix from 'notiflix';
 const options = {
   enableTime: true,
   time_24hr: true,
@@ -40,7 +41,7 @@ function dateChecker(selectedDates) {
         startBtn.disabled = false;
         return
     }
-    alert('Please choose a date in the future');
+    Notiflix.Notify.failure("Please choose a date in the future");
     startBtn.disabled = true;
 };
 
