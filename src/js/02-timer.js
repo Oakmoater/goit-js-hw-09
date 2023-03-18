@@ -47,6 +47,7 @@ function dateChecker(selectedDates) {
 function onStartTimer() {
     timerId = setInterval(startTimer, 1000);
     inputArea.disabled = true;
+    startBtn.disabled = true;
 };
 
 function startTimer() {
@@ -55,7 +56,6 @@ function startTimer() {
     dateRander(formatedDate);
     if (timeDifference < 1000) {
         clearInterval(timerId);
-        startBtn.disabled = true;
         inputArea.disabled = false;
     };
 };
